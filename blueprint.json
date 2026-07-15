@@ -1,0 +1,35 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.0",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/JeremyHayes11/pafcwebsite-demo/main/panamerican-fine-chemicals-theme.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Pan-American Fine Chemicals",
+        "blogdescription": "Global pharmaceutical and veterinary raw material sourcing"
+      }
+    }
+  ]
+}
